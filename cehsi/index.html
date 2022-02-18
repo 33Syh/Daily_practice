@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  　
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+</head>
+
+<body>
+  <div id="div_template2" style="background-color:yellow;width:600px" >
+  </div>
+  <script id="template2" type="text/x-jquery-tmpl">
+    <div>
+      <STRONG> journalName:</STRONG> ${ journalName}
+      <br>
+      <STRONG> id:</STRONG> ${ id} 
+      <br>
+      <STRONG> coreTypes:</STRONG> ${coreTypes}
+      <div style="margin-left:20px; background-color: yellowgreen;width:300px" >
+        {{each(index,item) focus}}
+        <div >
+          <span>${index+1}</span>.
+          <span>${item}</span>
+        </div>
+        <br>
+        {{/each}}
+      </div>
+    </div>
+    <hr>
+  </script>
+
+  <script type="text/javascript">
+    $(function () {
+      let data = [{
+          "id": 1,
+          "cover": null,
+          "journalName": "探索",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.906999945640564",
+          "classCode": "C0,BD,B",
+          "focus": [
+            "研究", "建设究", "学社研究", "文化与经济", "法律", "国际",
+          ]
+        },
+        {
+          "id": 2,
+          "cover": null,
+          "journalName": "山版）",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.3509999513626099",
+          "classCode": "CA",
+          "focus": [
+            " 想研究；", "研究；", " 经济123思想研究；", " 治经济学研究；"]
+        },
+        {
+          "id": 3,
+          "cover": null,
+          "journalName": "中州学刊",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.1720000505447388",
+          "classCode": "C0",
+          "focus": ["567十五神研究", "坚持和完善980特123制度研究", "提升政府行政效能和公信力研究", "完善哈哈哈和大大大监督体系研究",
+            "促进全体的撒的撒的结合共同富裕的制度机制和有效路径研究", "纪念980大大哈哈哈成立343434相关问题研究", "567说建设研究"
+          ]
+        },
+        {
+          "id": 4,
+          "cover": null,
+          "journalName": "吧吧吧吧吧啊啦啦啦研究",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.6970000267028809",
+          "classCode": "BD",
+          "focus": ["百年大567现代化成就与经验研究；", "说以来980特123建设成就与经验研究；", "全面建成小康吧吧吧吧吧啊的成就与经验研究。", "科学吧吧吧吧吧啊啦啦啦历史与理论研究栏目",
+            "科学吧吧吧吧吧啊啦啦啦的基本原则研究；", "吧吧吧吧吧啊啦啦啦发展的历史与经验研究；"
+          ]
+        },
+        {
+          "id": 5,
+          "cover": null,
+          "journalName": "探索",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.906999945640564",
+          "classCode": "C0,BD,B",
+          "focus": ["实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略"]
+        },
+        {
+          "id": 6,
+          "cover": null,
+          "journalName": "山东（哲学吧吧吧吧吧啊科学版）",
+          "coreTypes": "ISTIC,NJU,PKU",
+          "impactFactor": "1.3509999513626099",
+          "classCode": "CA",
+          "focus": ["实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略", "实施积极应对大大大大说老龄化大大大战略"]
+        }
+      ]
+      $('#template2').tmpl(data).appendTo('#div_template2');
+    });
+  </script>
+</body>
+
+</html>
